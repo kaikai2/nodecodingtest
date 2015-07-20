@@ -1,0 +1,31 @@
+{
+  "name": "nodecodingtest",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "config.js",
+  "dependencies": {
+    "protractor": "^2.1.0",
+    "selenium": "^2.20.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-nodeunit": "^0.4.1"
+  },
+  "scripts": {
+    "test": "protractor protractor.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://kaikai2@github.com/kaikai2/nodecodingtest.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Zikai Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaikai2/nodecodingtest/issues"
+  },
+  "homepage": "https://github.com/kaikai2/nodecodingtest"
+}
