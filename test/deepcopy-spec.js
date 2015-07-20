@@ -5,19 +5,18 @@
     
     // answer to question 3
     function deepCopy(obj) {
-        var arr, newObj, i;
         if (obj instanceof Array) {
-            arr = [];
-            for (i = 0; i < obj.length; i += 1) {
+            var arr = [];
+            for (var i = 0; i < obj.length; i++) {
                 arr.push(deepCopy(obj[i]));
             }
             return arr;
         }
         if (obj instanceof Object) {
-            newObj = {};
-            for (i in obj) {
-                if (obj.hasOwnProperty(i)) {
-                    newObj[i] = deepCopy(obj[i]);
+            var newObj = {};
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    newObj[key] = deepCopy(obj[key]);
                 }
             }
             return newObj;
@@ -52,10 +51,10 @@
                 ["a", 1, false],
                 {},
                 {a: 1, b: "b", c: true}
-            ], i, c;
+            ];
             
-            for (i = 0; i < cases.length; i += 1) {
-                c = cases[i];
+            for (var i = 0; i < cases.length; i++) {
+                var c = cases[i];
                 expect(deepCopy(c)).toEqual(c);
                 expect(deepCopy(c)).not.toBe(c);
             }
@@ -67,10 +66,10 @@
                 [[], [[]]],
                 [1, {}, false, {a: []}, []],
                 {a: [false, []], b: {c: {}}}
-            ], i, c;
+            ];
             
-            for (i = 0; i < cases.length; i += 1) {
-                c = cases[i];
+            for (var i = 0; i < cases.length; i++) {
+                var c = cases[i];
                 expect(deepCopy(c)).toEqual(c);
                 expect(deepCopy(c)).not.toBe(c);
             }
