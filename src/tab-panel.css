@@ -1,0 +1,57 @@
+.tab {
+    border: 1px solid gray;
+    position: relative;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 5px;
+}
+
+.tab .tabname {
+    display: block;
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.tab .tabcontainer {
+    display: block;
+    border-bottom: 1px solid black;
+    margin: 0px;
+    z-index: 1;
+    position: relative;
+}
+
+.tab .tabitem{
+    display: inline-block;
+    position: relative;
+    border: 1px solid darkgray;
+    border-bottom: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 1px;
+    margin-bottom: -1px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.tab .tabitem:hover {
+    background-color: lightgray;
+}
+
+.tab .tabitem.active{
+    border: 1px solid black;
+    border-bottom-color: transparent;
+    background-color: white;
+    top: 0px;
+    color: red;
+    cursor: default;
+}
+
+.tab .tabcontent {
+    display: none;
+    padding: 5px;
+}
+
+.tab .tabcontent.active {
+    display: block;
+    padding: 5px;
+}
