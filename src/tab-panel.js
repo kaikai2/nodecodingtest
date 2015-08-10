@@ -40,7 +40,7 @@
                 li.textContent = title;
                 li.classList.add("tabitem");
                 li.setAttribute("index", this.tabs.length);
-                li.onclick = changeActive.bind(this);
+                li.onclick = this.changeActive.bind(this);
                 
                 if (!activeFound) {
                     elem.classList.add("active");
